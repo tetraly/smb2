@@ -2,9 +2,9 @@
 
 LevelData_1_1_Area0:
 	; Level Header
-	;   pages (0-indexed), orientation, background palette, sprite palette, music,
+	;   world (0-indexed), pages (0-indexed), orientation, background palette, sprite palette, music,
 	;   AX-FX type, 3X-9X type, ground setting (0-31), ground type (0-7)
-	levelHeader 3, LevelDirection_Vertical, 1, 1, LevelMusic_Overworld, 0, 0, $13, $0
+	levelHeaderNew 0, 3, LevelDirection_Vertical, 1, 1, LevelMusic_Overworld, 0, 0, $13, $0
 
 	.db $B7, $0A
 IFNDEF DISABLE_DOOR_POINTERS
@@ -21,10 +21,10 @@ ENDIF
 	.db $1E, $C1
 	.db $3E, $0A
 IFNDEF DISABLE_DOOR_POINTERS
-	.db $00, $20
+	.db $04, $22
 ENDIF
 IFDEF DISABLE_DOOR_POINTERS
-	.db $F5, $00, $20
+	.db $F5, $04, $22
 ENDIF
 	.db $20, $CF
 	.db $FF

@@ -4,7 +4,7 @@ LevelData_4_2_Area1:
 	; Level Header
 	;   pages (0-indexed), orientation, background palette, sprite palette, music,
 	;   AX-FX type, 3X-9X type, ground setting (0-31), ground type (0-7)
-	levelHeader 9, LevelDirection_Horizontal, 0, 0, LevelMusic_Overworld, 0, 0, $08, $2
+	levelHeaderNew, 3, 9, LevelDirection_Horizontal, 0, 0, LevelMusic_Overworld, 0, 0, $08, $2
 
 	.db $32, $10
 	.db $14, $11

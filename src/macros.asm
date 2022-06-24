@@ -47,6 +47,29 @@ MACRO levelHeader pages, horizontal, bgPalette, spritePalette, music, objectType
 	ENDIF
 ENDM
 
+
+;
+; New LevelHeader macro
+;
+; The order of the parameters is slightly different than how it's encoded, but
+; hopefully this order is a little more intuitive?
+;
+MACRO levelHeaderNew world, pages, horizontal, bgPalette, spritePalette, music, objectTypeAXFX, objectType3X9X, groundSetting, groundType
+	.db horizontal << 7 | bgPalette << 3 | spritePalette
+	IFDEF AREA_HEADER_TILESET
+  	.db world << 5 | groundSetting
+  ELSE
+    .db %11100000 | groundSetting    
+  ENDIF
+	.db pages << 4 | objectTypeAXFX << 2 | objectType3X9X
+	IFNDEF LEVEL_ENGINE_UPGRADES
+		.db groundType << 3 | music
+	ENDIF
+	IFDEF LEVEL_ENGINE_UPGRADES
+		.db groundType << 4 | music
+	ENDIF
+ENDM
+
 MACRO musicPointerOffset label, offset
 	.db (label - MusicPointerOffset + offset)
 ENDM
