@@ -61,7 +61,7 @@ PRESERVE_UNUSED_SPACE = 1
 ;          at the worst possible time.
 ;          The fix just waits for an NMI cycle before doing its work.
 ; @@
- REV_A = 1
+; REV_A = 1
 
 ; ----------------------------------------
 ; Build Super Mario USA ROM.
@@ -87,16 +87,16 @@ ENDIF
 
 
 ; Show all 8 frames of CHR cycling animation
- FIX_CHR_CYCLE = 1
+;;; FIX_CHR_CYCLE = 1
 
 ; Fixes the POW falling log glitch
- FIX_POW_LOG_GLITCH = 1
+;;; FIX_POW_LOG_GLITCH = 1
 
 ; Fixes vine climbing bug when holding up and down simultaneously
- FIX_CLIMB_ZIP = 1
+;;; FIX_CLIMB_ZIP = 1
 
 ; Fixes green platform tiles in Subspace
- FIX_SUBSPACE_TILES = 1
+;;; FIX_SUBSPACE_TILES = 1
 
 ; Supports D1 joypad data for expansion port controllers
 ; JOYPAD_D1 = 1
@@ -110,7 +110,7 @@ ENDIF
 ; DISABLE_BONUS_CHANCE = 1
 
 ; Go to the Charater Select screen after death
- CHARACTER_SELECT_AFTER_DEATH = 1
+;;; CHARACTER_SELECT_AFTER_DEATH = 1
 
 ; Respawn at the beginning of the area instead of dying
 ; RESPAWN_INSTEAD_OF_DEATH = 1
@@ -155,7 +155,7 @@ ENDIF
 ; FME7 = 1
 
 ; Pads title screen PPU data for easier modification
- PAD_TITLE_SCREEN_PPU_DATA = 1
+; PAD_TITLE_SCREEN_PPU_DATA = 1
 
 ; Expands various lookup tables so that more values can be added
 ; EXPAND_TABLES = 1
@@ -167,7 +167,7 @@ ENDIF
 ; EXPAND_MUSIC = 1
 
 ; Encode world tileset in unused 3 bits of area header byte 2
- AREA_HEADER_TILESET = 1
+;;; AREA_HEADER_TILESET = 1
 
 ; Checks the CHR latch variable to reload the CHR data
 ; RESET_CHR_LATCH = 1
@@ -185,10 +185,10 @@ ENDIF
 ; ENABLE_TILE_ATTRIBUTES_TABLE = 1
 
 ; Disables door pointers, so that area pointers are always required
- DISABLE_DOOR_POINTERS = 1
+;;; DISABLE_DOOR_POINTERS = 1
 
 ; Enables full-page door/vine searching so that entrances don't need to align
- ROBUST_TRANSITION_SEARCH = 1
+;;; ROBUST_TRANSITION_SEARCH = 1
 
 ; Use RAM address for player hitbox offset rather than PlayerDucking
 ; PLAYER_HITBOX = 1
